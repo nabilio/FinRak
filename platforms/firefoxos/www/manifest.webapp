@@ -4,11 +4,10 @@
         "*"
     ],
     "version": "0.0.1",
-    "name": "HelloCordova",
-    "description": "A sample Apache Cordova application that responds to the deviceready event.",
+    "name": "FinRak",
+    "description": "Trouvez le meilleur itinéraire à vos amis",
     "developer": {
-        "name": "Apache Cordova Team",
-        "url": "http://cordova.io"
+        "name": "ROUIJEL NABIL"
     },
     "icons": {
         "60": "/icon/icon-60.png",

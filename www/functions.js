@@ -38,7 +38,10 @@ initialize = function(){
             });
             
             map.setCenter(geolocate);
-            
+            var x = document.getElementById("origin");
+            //par ce que id de la input est (origin) tu peut la changer <input type="text" name="origin" id="origin" >
+            x.value = geolocate;
+            // ou tu peut fair x.innerHTML = position.coords.latitude + position.coords.longitude 
         });
         
     } else {
