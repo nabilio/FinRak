@@ -6,6 +6,7 @@ var direction;
 var geolocate;
 
 
+
 initialize = function(){
   var latLng = new google.maps.LatLng(50.6371834, 3.063017400000035); // Correspond au coordonnées de Lille
   var map = new google.maps.Map(document.getElementById('map'), myOptions);
@@ -28,15 +29,14 @@ initialize = function(){
         
             var geolocate = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
             
-            var infowindow = new google.maps.InfoWindow({
-                map: map,
-                position: geolocate,
-                content:
-                    '<h4>My Location!</h4>' +
-                    '<h5>Latitude: ' + position.coords.latitude + '</h5>' +
-                    '<h5>Longitude: ' + position.coords.longitude + '</h5>'
-            });
-            
+              
+           var marker = new google.maps.Marker({
+    position : geolocate,
+    map      : map,
+    title    : "My Location"
+    //icon     : "marker_Mylocation" // Position actuel 
+  });
+          
             map.setCenter(geolocate);
             var x = document.getElementById("origin");
             //par ce que id de la input est (origin) tu peut la changer <input type="text" name="origin" id="origin" >
@@ -48,8 +48,6 @@ initialize = function(){
         document.getElementById('map').innerHTML = 'No Geolocation Support.';
     }
 
-  
-  
   map      = new google.maps.Map(document.getElementById('map'), myOptions);
   panel    = document.getElementById('panel');
   
